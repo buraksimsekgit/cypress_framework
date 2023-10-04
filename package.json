@@ -1,0 +1,27 @@
+{
+  "name": "cypressproject",
+  "version": "1.0.0",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:all": "npx cypress run",
+    "test:all:headed": "npx cypress run --headed",
+    "test:chrome": "npx cypress run --browser chrome",
+    "test:chrome:headed": "npx cypress run --browser chrome --headed",
+    "test:config": "npx cypress run --config viewportWidth=1280,viewportHeight=720 --headed",
+    "test:specific": "npx cypress run --spec \"cypress/integration/specificTestFile.spec.js\"",
+    "test:custom": "npx cypress run --spec \"cypress/e2e/integration/10-customCommands.cy.js\" --env SITE_URL=https://techglobal-training.netlify.app/frontend --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.4",
+    "@cypress/grep": "^4.0.0",
+    "cypress": "^13.3.0",
+    "cypress-mochawesome-reporter": "^3.6.0",
+    "cypress-real-events": "^1.10.0",
+    "eslint": "^8.49.0"
+  }
+}

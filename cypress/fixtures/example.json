@@ -1,0 +1,10 @@
+{
+  "name": "Using fixtures to represent data",
+  "email": "hello@cypress.io",
+  "username": "TechGlobal",
+  "password": "Test1234",
+  "body": "Fixtures are a great way to mock data for responses to routes",
+  "headers": ["Rank", "Company", "Employees", "Country"],
+  "firstRow": ["1", "Amazon", "1,523,000", "USA"],
+  "countries": ["USA", "China", "USA", "USA", "S. Korea"]
+}
