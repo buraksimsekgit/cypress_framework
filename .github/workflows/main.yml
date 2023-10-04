@@ -23,3 +23,9 @@ jobs:
         with:
           name: mochawesome-report
           path: cypress/reports/html/index.html
+    
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAGES }}
+          publish_dir: cypress/reports/html/index.html # Updated with your report directory
