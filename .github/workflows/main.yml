@@ -15,16 +15,11 @@ jobs:
         with: 
           # browser: chrome
           # headless: true
-          spec: cypress/e2e/15-pageObject.cy.js
+          # spec: cypress/e2e/15-pageObject.cy.js
+          command: npm run test:chrome
 
       - name: Upload Mochawesome Report
         uses: actions/upload-artifact@v3
         with:
           name: mochawesome-report
           path: cypress/reports/html/index.html
-        
-      - name: Deploy Mochawesome Report to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: cypress/reports/html
