@@ -15,7 +15,7 @@ jobs:
         with: 
           # browser: chrome
           # headless: true
-          spec: cypress/integration/pageObject.cy.js
+          spec: cypress/e2e/pageObject.cy.js
 
       - name: Upload Mochawesome Report
         uses: actions/upload-artifact@v3
