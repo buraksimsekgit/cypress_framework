@@ -1,4 +1,5 @@
 name: End-to-end tests
+# This specifies the event that will trigger the workflow. In this case, the workflow will run on every push event to the repository.
 on: push
 jobs:
   cypress-run:
@@ -10,3 +11,14 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v6
+        # can specify the browser type and headless mode
+        with: 
+          # browser: chrome
+          # headless: true
+          spec: cypress/integration/pageObject.cy.js
+
+      - name: Upload Mochawesome Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: mochawesome-report
+          path: cypress/reports/html/index.html
